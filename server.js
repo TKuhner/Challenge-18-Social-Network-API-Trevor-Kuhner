@@ -1,20 +1,22 @@
-// set up connections
 const express = require('express');
 const db = require('./config/connection');
 const routes = require('./routes');
 
-// set up port and express instance
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-// set up middleware
+// Set up middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// Set up routes
 app.use(routes);
 
 // Serve up static assets
-db.once("open", () => {
-    app.listen(PORT, () => {
-        console.log(`API server running on port ${PORT}!`);
-    });
+
+// Establish database connection and start the server
+db.once('open', () => {
+  app.listen(PORT, () => {
+    console.log(`API server running on port ${PORT}!`);
+  });
 });
