@@ -62,7 +62,7 @@ const thoughtController = {
         try {
             const thoughtData = await Thought.findOneAndUpdate(
                 {_id: req.params.id},
-                req.body,
+                {$set:req.body},
                 {new: true}
             );
             if (!thoughtData) {
@@ -79,12 +79,15 @@ const thoughtController = {
     // delete a thought
     async deleteThought(req, res) {
         try {
-            const thoughtData = await Thought.findOneAndDelete({_id: req.params.id});
+            const thoughtData = await Thought.findOneAndDelete({_id: req.params.thoughtId});
+            const userData = await User.findOneAndUpdate({_id: req.params.userId}, 
+                {$pull: {thoughts: req.params.thoughtId}}, 
+                {new: true});
             if (!thoughtData) {
                 res.status(404).json({message: 'No thought found with this id!'});
                 return;
             }
-            res.json(thoughtData);
+            res.json({thoughtData, userData});
         }
         catch (err) {
             console.log(err);
