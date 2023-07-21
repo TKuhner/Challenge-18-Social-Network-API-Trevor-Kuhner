@@ -82,7 +82,7 @@ const userController = {
     async addFriend(req, res) {
         try{
             const userData = await User.findOneAndUpdate(
-                {_id: req.params.id},
+                {_id: req.params.userId},
                 {$addToSet: {friends: req.params.friendId}},
                 {runValidators: true, new: true}
             )
@@ -100,7 +100,7 @@ const userController = {
     async deleteFriend(req, res) {
         try{
             const userData = await User.findOneAndUpdate(
-                {_id: req.params.id},
+                {_id: req.params.userId},
                 {$pull: {friends: req.params.friendId}},
                 {runValidators: true, new: true}
             )
