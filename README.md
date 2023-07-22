@@ -1,3 +1,5 @@
+
+https://github.com/TKuhner/Challenge-18-Social-Network-API-Trevor-Kuhner/assets/71107536/e397cc82-27c4-47e1-baa8-09d8c463be00
 # Challenge-18-Social-Network-API-Trevor-Kuhner
 
 ## Description
@@ -81,7 +83,7 @@ http://localhost:3001/
 
 ## Walkthrough Video
 
-<video src="Challenge%2018%20Merged.mp4" controls title="Title"></video>
+https://github.com/TKuhner/Challenge-18-Social-Network-API-Trevor-Kuhner/assets/71107536/4979d81a-678a-4f56-9381-d032f71e7a16
 
 ## License
 
