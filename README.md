@@ -7,8 +7,9 @@ Data manipulation is done using CRUD methods in Insomnia Core. The user can crea
 
 ## Table of Contents
 * [Installation](#installation)
-* [Technologies](#technologies)
 * [Usage](#usage)
+* [Technologies](#technologies)
+* [Walkthrough Video](#walkthrough-video)
 * [License](#license)
 
 
@@ -77,6 +78,10 @@ http://localhost:3001/
 * MongoDB
 * Mongoose ODM
 * Insomnia Core
+
+## Walkthrough Video
+
+<video src="Challenge%2018%20Merged.mp4" controls title="Title"></video>
 
 ## License
 
